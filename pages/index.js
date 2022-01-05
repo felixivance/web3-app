@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-black h-screen text-white">
       <Head>
         <title>Crypto App</title>
         <link rel="icon" href="/favicon.ico" />

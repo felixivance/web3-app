@@ -5,16 +5,13 @@ function Navbar() {
         <div className="">
             <div className="">
 
-                {/* avatar */}
-                <UserIcon className='h-5'/>
-                {/* logo */}
-                <h2>CryptoVerse</h2>
+                <p>Welcome to the navbar</p>
                 {/* <button className="">
 
                 </button> */}
 
             </div>
-            
+
         </div>
     )
 }
