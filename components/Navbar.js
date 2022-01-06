@@ -1,11 +1,12 @@
 import { UserIcon } from '@heroicons/react/outline'
-
+import CyberPunkLogo from '../public/images/cryptopunk-logo.png'
+import Image from 'next/image'
 function Navbar() {
     return (
-        <div className="">
+        <div className="text-white flex">
             <div className="">
 
-                <p>Welcome to the navbar</p>
+                <Image src={CyberPunkLogo} alt="" />
                 {/* <button className="">
 
                 </button> */}
