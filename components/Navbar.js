@@ -4,7 +4,7 @@ import CyberPunkLogo from '../public/images/cryptopunk-logo.png'
 import Image from 'next/image'
 function Navbar() {
     return (
-        <div className="text-white flex justify-between items-center pt-4">
+        <div className="flex items-center pt-3 justify-between">
             {/* left section */}
             <div className="">
 
@@ -12,16 +12,16 @@ function Navbar() {
 
             </div>
             {/* middle */}
-            <div className="bg-gray-800 flex rounded-full p-4 space-x-3 items-center">
+            <div className="bg-[#1c1c1e] flex rounded-full p-2 space-x-3 items-center max-w-lg flex-1">
                 <SearchIcon className='text-white h-5' />
-                <input type="text" className='border-none bg-transparent focus:outline-none' placeholder='collection, item or user' />
+                <input type="text" className='border-none bg-transparent focus:outline-none flex-1 text-white' placeholder='collection, item or user' />
             </div>
             {/* right */}
-            <div className='flex space-x-3 items-center '>
+            <div className='flex space-x-3 items-center text-sm text-gray-400 justify-end'>
                 <p>Drops</p>
                 <p>Market Place</p>
                 <p>Create</p>
-                <SunIcon />
+                <SunIcon className='w-10' />
             </div>
 
         </div>
