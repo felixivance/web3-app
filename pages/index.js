@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import CollectionCard from '../components/CollectionCard'
 import Navbar from '../components/Navbar'
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
 
       {/* navbar */}
       <Navbar />
+      <CollectionCard id="0" name="felx" traits={[{ 'value': '0' }]} image='' />
       {/* main */}
       {/* footer */}
     </div>
