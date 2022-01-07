@@ -17,13 +17,13 @@ function Navbar() {
                 <input type="text" className='border-none bg-transparent focus:outline-none flex-1 text-white' placeholder='collection, item or user' />
             </div>
             {/* right */}
-            <div className='flex space-x-1 md:space-x-3 items-center text-sm text-gray-400 justify-end sm:pl-2'>
+            <div className='flex space-x-1 md:space-x-3 items-center text-sm text-gray-400 justify-end sm:pl-2 pr-2'>
                 <p>Drops</p>
                 <p>Market Place</p>
                 <p>Create</p>
-                <SunIcon className='w-10' />
-                <button className='bg-gradient-to-r from-[#59f9b7] to-[#66feea] text-white pt-2 pb-2 pl-4 pr-4 rounded-lg'>
-                    New
+                <SunIcon className='w-10 text-white' />
+                <button className='bg-gradient-to-r from-[#59f9b7] to-[#66feea] text-black pt-2 pb-2 pl-4 pr-4 rounded-lg'>
+                    GET IN
                 </button>
             </div>
 
