@@ -5,9 +5,7 @@ function CollectionCard({ id, name, traits, image }) {
         <div className='text-white'>
             <img src={image} alt="img" />
             {/* details */}
-            <div>
 
-            </div>
             {/* name */}
             <div>
                 {name}
