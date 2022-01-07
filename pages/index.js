@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="bg-black h-screen ">
       <Head>
-        <title>Crypto App</title>
+        <title>NFT App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
