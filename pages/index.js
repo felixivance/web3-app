@@ -12,7 +12,7 @@ export default function Home() {
 
       {/* navbar */}
       <Navbar />
-      <CollectionCard id="0" name="felx" traits={[{ 'value': '0' }]} image='' />
+      <CollectionCard id="0" name="felix" traits={[{ 'value': '1' }]} image='' />
       {/* main */}
       {/* footer */}
     </div>
