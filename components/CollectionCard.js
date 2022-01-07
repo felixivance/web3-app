@@ -17,7 +17,7 @@ function CollectionCard({ id, name, traits, image }) {
             </div>
             {/* price container */}
             <div>
-                <img src={weth} alt="" />
+                <img src={weth} alt="weth img" />
             </div>
         </div>
     )
