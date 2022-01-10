@@ -3,14 +3,14 @@ import Image from 'next/image';
 function CollectionCard({ id, name, traits, image }) {
     return (
         <div className='text-white'>
-            <img src={image} alt="img" />
+            <img src={image} alt="img" className="roundet-tr-md rounded-tl-md" />
             {/* details */}
 
             {/* name */}
-            <div>
-                {name}
+            <div className="pt-4 text-lg flex space-x-2">
+                <div>{name}</div>
                 <div>
-                    .#{id}
+                    #{id}
                 </div>
             </div>
             {/* price container */}
