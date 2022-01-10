@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import CollectionCard from '../components/CollectionCard'
 import Navbar from '../components/Navbar'
+import { useState, useEffect } from 'react';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
 
       {/* navbar */}
       <Navbar />
-      <CollectionCard id="0" name="felix" traits={[{ 'value': '1' }]} image='https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600' />
+      <CollectionCard id="0" name="Felix" traits={[{ 'value': '1' }]} image='https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600' />
       {/* main */}
       {/* footer */}
     </div>
