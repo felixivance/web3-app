@@ -2,8 +2,23 @@ import Head from 'next/head'
 import CollectionCard from '../components/CollectionCard'
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react';
+import { axios } from 'axios';
 
 export default function Home() {
+
+  const [punkListData, setPunkListData] = useState([]);
+
+
+  useEffect(() => {
+    const getMyNfts = async => {
+
+    }
+
+    return () => {
+      cleanup
+    }
+  }, [])
+
   return (
     <div className="bg-black h-screen ">
       <Head>
