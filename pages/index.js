@@ -13,9 +13,8 @@ export default function Home() {
     const getMyNfts = async () => {
       const openSeaData = await axios.get('https://testnets-api.opensea.io/assets?asset_contract_address=0xf47236FBd27a4f5a6d9328d2C443fD4EFC17f08a&order_direction=asc')
       console.log(openSeaData.data.assets)
+      setPunkListData(openSeaData.data.assets)
     }
-
-
 
     return getMyNfts();
   }, [])
@@ -29,7 +28,14 @@ export default function Home() {
 
       {/* navbar */}
       <Navbar />
-      <CollectionCard id="0" name="Felix" traits={[{ 'value': '1' }]} image='https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600' />
+      <p className='text-white'>{punkListData.length}</p>
+      {
+        punkListData?.map((item, index) => (
+          <CollectionCard id={item.id} key={index}
+            name={item.collection.name} traits={[{ 'value': '1' }]} image='https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600' />
+        ))
+      }
+
       {/* main */}
       {/* footer */}
     </div>
