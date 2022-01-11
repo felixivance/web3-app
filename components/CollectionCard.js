@@ -2,8 +2,8 @@ import weth from '../public/images/weth.png';
 import Image from 'next/image';
 function CollectionCard({ id, name, traits, image }) {
     return (
-        <div className='text-white bg-[#1a1c1e] rounded-md overflow-hidden w-[300px] h-[450px] mb-2 mr-2 '>
-            <img src={image} alt="img" className="roundet-tr-md rounded-tl-md" />
+        <div className='text-white bg-[#1a1c1e] rounded-md  w-[300px] h-[450px] mb-2 mr-2 cursor-pointer'>
+            <img src={image} alt="img" className="roundet-tr-md rounded-tl-md  h-[200px] md:h-[250px] w-[250px]" />
             {/* details */}
 
             {/* name */}

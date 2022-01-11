@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const getMyNfts = async () => {
       const openSeaData = await axios.get('https://testnets-api.opensea.io/assets?asset_contract_address=0xf47236FBd27a4f5a6d9328d2C443fD4EFC17f08a&order_direction=asc')
-      console.log(openSeaData.data.assets)
+
       setPunkListData(openSeaData.data.assets)
     }
 
@@ -20,7 +20,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="bg-black h-full ">
+    <div className="bg-black h-screen ">
       <Head>
         <title>NFT App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -28,8 +28,8 @@ export default function Home() {
 
       {/* navbar */}
       <Navbar />
-
-      <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 pl-2 pr-2 '>
+      {/* grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 pl-2 pr-2 */}
+      <div className='flex overflow-scroll'>
         {
           punkListData?.map((item, index) => (
             item.name !== null && <CollectionCard id={item.id} key={index}
