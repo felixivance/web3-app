@@ -20,7 +20,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="bg-black h-screen ">
+    <div className="bg-black h-full ">
       <Head>
         <title>NFT App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -28,13 +28,16 @@ export default function Home() {
 
       {/* navbar */}
       <Navbar />
-      <p className='text-white'>{punkListData.length}</p>
-      {
-        punkListData?.map((item, index) => (
-          <CollectionCard id={item.id} key={index}
-            name={item.collection.name} traits={[{ 'value': '1' }]} image='https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600' />
-        ))
-      }
+
+      <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 pl-2 pr-2 '>
+        {
+          punkListData?.map((item, index) => (
+            item.name !== null && <CollectionCard id={item.id} key={index}
+              name={item.name} traits={item.traits} image={item.image_original_url} alt="" />
+            // https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600
+          ))
+        }
+      </div>
 
       {/* main */}
       {/* footer */}
