@@ -28,13 +28,36 @@ export default function Home() {
 
       {/* navbar */}
       <Navbar />
+
+      {/* selected punk */}
+      <div className='flex  border-gray-200 mb-3 text-white space-x-3 items-center'>
+        <div>
+          <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[200px] h-[200px] rounded-lg' alt="" />
+        </div>
+        <div className='flex flex-col justify-between'>
+          <div className='flex flex-col'>
+            <p className='text-2xl font-bold'>Bandana Punk</p>
+            <p>#2</p>
+          </div>
+          <div className='flex '>
+            {/* owner img */}
+            <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[50px] h-[50px] rounded-full' alt="" />
+            <div className='flex flex-col pl-2'>
+              <p> 0x1928371982ajsdnk1239718</p>
+              <p> @Felix Ivance</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       {/* grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 pl-2 pr-2 */}
       <div className='flex overflow-scroll'>
         {
           punkListData?.map((item, index) => (
             item.name !== null && <CollectionCard id={item.id} key={index}
               name={item.name} traits={item.traits} image={item.image_original_url} alt="" />
-            // https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600
+            // 
           ))
         }
       </div>
