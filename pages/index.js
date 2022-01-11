@@ -22,12 +22,12 @@ export default function Home() {
 
 
   const selectPunk = (punk) => {
-    console.log(punk);
+
     setActivePunk(punk);
   }
 
   return (
-    <div className="bg-black h-[100%] ">
+    <div className="bg-black h-screen ">
       <Head>
         <title>NFT App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -71,7 +71,9 @@ export default function Home() {
         </div>
       }
 
-      <hr />
+      {
+        activePunk && <hr />
+      }
 
       {/* grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 pl-2 pr-2 */}
       <div className='flex overflow-scroll pt-4'>
