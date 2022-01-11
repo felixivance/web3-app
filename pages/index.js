@@ -30,22 +30,29 @@ export default function Home() {
       <Navbar />
 
       {/* selected punk */}
-      <div className='flex  border-gray-200 mb-3 text-white space-x-3 items-center'>
-        <div>
+      <div className='flex  border-gray-200 mb-3 text-white space-x-3  pt-5 w-[100%] '>
+        <div className=''>
           <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[200px] h-[200px] rounded-lg' alt="" />
         </div>
-        <div className='flex flex-col justify-between'>
+        <div className='flex flex-col justify-around w-full'>
           <div className='flex flex-col'>
             <p className='text-2xl font-bold'>Bandana Punk</p>
             <p>#2</p>
           </div>
-          <div className='flex '>
+          <div className='flex justify-between '>
             {/* owner img */}
-            <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[50px] h-[50px] rounded-full' alt="" />
-            <div className='flex flex-col pl-2'>
-              <p> 0x1928371982ajsdnk1239718</p>
-              <p> @Felix Ivance</p>
+            <div className='flex space-x-1'>
+              <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[50px] h-[50px] rounded-full' alt="" />
+              <div className='flex flex-col pl-2'>
+                <p> 0x1928371982ajsdnk1239718</p>
+                <p className='text-purple-400'> @Felix Ivance</p>
+              </div>
             </div>
+            {/* social media icons */}
+            <div className='flex'>
+              <img src="/images/instagram.png" alt="" className='w-10 h-10' />
+            </div>
+
           </div>
 
         </div>
