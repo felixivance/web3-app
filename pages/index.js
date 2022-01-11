@@ -7,6 +7,7 @@ import axios from 'axios';
 export default function Home() {
 
   const [punkListData, setPunkListData] = useState([]);
+  const [activePunk, setActivePunk] = useState(null);
 
 
   useEffect(() => {
@@ -19,8 +20,14 @@ export default function Home() {
     return getMyNfts();
   }, [])
 
+
+  const selectPunk = (punk) => {
+    console.log("clicked");
+    setActivePunk(punk);
+  }
+
   return (
-    <div className="bg-black h-screen ">
+    <div className="bg-black h-[100%] ">
       <Head>
         <title>NFT App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -30,42 +37,50 @@ export default function Home() {
       <Navbar />
 
       {/* selected punk */}
-      <div className='flex  border-gray-200 mb-3 text-white space-x-3  pt-5 w-[100%] '>
-        <div className=''>
-          <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[200px] h-[200px] rounded-lg' alt="" />
-        </div>
-        <div className='flex flex-col justify-around w-full'>
-          <div className='flex flex-col'>
-            <p className='text-2xl font-bold'>Bandana Punk</p>
-            <p>#2</p>
+      {
+        activePunk &&
+        <div className='flex  border-gray-200 mb-3 text-white space-x-3  pt-5 w-[100%] '>
+          <div className=''>
+            <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[200px] h-[200px] rounded-lg' alt="" />
           </div>
-          <div className='flex justify-between '>
-            {/* owner img */}
-            <div className='flex space-x-1'>
-              <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[50px] h-[50px] rounded-full' alt="" />
-              <div className='flex flex-col pl-2'>
-                <p> 0x1928371982ajsdnk1239718</p>
-                <p className='text-purple-400'> @Felix Ivance</p>
+          <div className='flex flex-col justify-around w-full'>
+            <div className='flex flex-col'>
+              <p className='text-2xl font-bold'>{activePunk?.name}</p>
+              <p>#{activePunk?.id}</p>
+            </div>
+            <div className='flex justify-between '>
+              {/* owner img */}
+              <div className='flex space-x-1'>
+                <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[50px] h-[50px] rounded-full' alt="" />
+                <div className='flex flex-col pl-2'>
+                  <p> 0x1928371982ajsdnk1239718</p>
+                  <p className='text-purple-400'> @Felix Ivance</p>
+                </div>
               </div>
-            </div>
-            {/* social media icons */}
-            <div className='flex space-x-1'>
-              <img src="/images/instagram.png" alt="" className='w-8 h-8' />
-              <img src="/images/twitter.png" alt="" className='w-8 h-8' />
-              <img src="/images/more.png" alt="" className='w-8 h-8' />
+              {/* social media icons */}
+              <div className='flex space-x-1'>
+                <img src="/images/instagram.png" alt="" className='w-8 h-8' />
+                <img src="/images/twitter.png" alt="" className='w-8 h-8' />
+                <img src="/images/more.png" alt="" className='w-8 h-8' />
+              </div>
+
             </div>
 
           </div>
-
         </div>
-      </div>
+      }
+
+      <hr />
 
       {/* grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 pl-2 pr-2 */}
-      <div className='flex overflow-scroll'>
+      <div className='flex overflow-scroll pt-4'>
         {
           punkListData?.map((item, index) => (
-            item.name !== null && <CollectionCard id={item.id} key={index}
-              name={item.name} traits={item.traits} image={item.image_original_url} alt="" />
+            item.name !== null && <div onClick={() => selectPunk(item)}>
+              <CollectionCard id={item.id} key={index}
+                name={item.name} traits={item.traits} image={item.image_original_url} alt=""
+              />
+            </div>
             // 
           ))
         }
