@@ -49,8 +49,10 @@ export default function Home() {
               </div>
             </div>
             {/* social media icons */}
-            <div className='flex'>
-              <img src="/images/instagram.png" alt="" className='w-10 h-10' />
+            <div className='flex space-x-1'>
+              <img src="/images/instagram.png" alt="" className='w-8 h-8' />
+              <img src="/images/twitter.png" alt="" className='w-8 h-8' />
+              <img src="/images/more.png" alt="" className='w-8 h-8' />
             </div>
 
           </div>
