@@ -39,7 +39,7 @@ export default function Home() {
       {/* selected punk */}
       {
         activePunk &&
-        <div className='flex  border-gray-200 mb-3 text-white space-x-3  pt-5 w-[100%] '>
+        <div className='flex  border-gray-200 mb-3 text-white space-x-3  pt-5 w-[100%]'>
           <div className=''>
             <img src={activePunk.image_original_url} alt="" className='w-[500px] h-[350px] rounded-lg' alt="" />
             {/* <img src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w600" className='w-[200px] h-[200px] rounded-lg' alt="" /> */}
